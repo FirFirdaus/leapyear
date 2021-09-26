@@ -1,0 +1,27 @@
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+
+#MY FIRST WAY, abit hard though
+# position_split = position.split(", ")
+# digits = [int(x) for x in str(position)]
+
+# first_choice = digits[0]
+# second_choice = digits[1]
+
+# print(first_choice)
+# print(second_choice)
+
+
+# map[second_choice - 1][first_choice - 1]= "X"
+
+#Another WAY
+horizontal = int(position[0])
+vertical = int(position[1])
+
+map[vertical - 1][horizontal - 1] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
